@@ -59,13 +59,13 @@ namespace SistemaDeRecursosHumanos
                 || labelCargo.Text == ""
                 || labelSalario.Text == "")
             {
-                MessageBox.Show("Por favor, preencha os espaços em branco", "Mensssssssssssssssss de erro"
+                MessageBox.Show("Por favor, preencha os espaços em branco", "Mensagem de erro"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 DialogResult check = MessageBox.Show("Tem certeza que deseja atualiza o funcionário: " 
-                    + labelNome.Text.Trim() + "?", "Mensssssssssssssssss de confirmação"
+                    + labelNome.Text.Trim() + "?", "Mensagem de confirmação"
                     , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if(check == DialogResult.Yes)
@@ -91,7 +91,7 @@ namespace SistemaDeRecursosHumanos
                                 mostraFuncionarios();
 
                                 MessageBox.Show("Atualizado com sucesso!"
-                                    , "Mensssssssssssssssss informativa", MessageBoxButtons.OK
+                                    , "Mensagem informativa", MessageBoxButtons.OK
                                     , MessageBoxIcon.Information);
 
                                 limpaCampos();
@@ -99,7 +99,7 @@ namespace SistemaDeRecursosHumanos
                             }
                         }catch(Exception ex)
                         {
-                            MessageBox.Show("Erro: " + ex, "Mensssssssssssssssss de erro"
+                            MessageBox.Show("Erro: " + ex, "Mensagem de erro"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         finally
@@ -110,7 +110,7 @@ namespace SistemaDeRecursosHumanos
                 }
                 else
                 {
-                    MessageBox.Show("Cancelado", "Mensssssssssssssssss informativa"
+                    MessageBox.Show("Cancelado", "Mensagem informativa"
                     , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }

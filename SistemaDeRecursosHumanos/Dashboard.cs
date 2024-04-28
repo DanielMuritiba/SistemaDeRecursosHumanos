@@ -61,7 +61,7 @@ namespace SistemaDeRecursosHumanos
 
                 }catch(Exception ex)
                 {
-                    MessageBox.Show("Erro: " + ex, "Mensssssssssssssssss de erro"
+                    MessageBox.Show("Erro: " + ex, "Mensagem de erro"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
@@ -98,7 +98,7 @@ namespace SistemaDeRecursosHumanos
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro: " + ex, "Mensssssssssssssssss de erro"
+                    MessageBox.Show("Erro: " + ex, "Mensagem de erro"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
@@ -135,7 +135,7 @@ namespace SistemaDeRecursosHumanos
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro: " + ex, "Mensssssssssssssssss de erro"
+                    MessageBox.Show("Erro: " + ex, "Mensagem de erro"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally

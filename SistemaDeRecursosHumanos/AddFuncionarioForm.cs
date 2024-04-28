@@ -54,7 +54,7 @@ namespace SistemaDeRecursosHumanos
                 || imagemFunc.Image == null)
             {
                 MessageBox.Show("Por favor, preencha os campos em branco"
-                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -73,7 +73,7 @@ namespace SistemaDeRecursosHumanos
                             if(count >= 1)
                             {
                                 MessageBox.Show(addFunc_id.Text.Trim() + " já foi utilizado"
-                                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -113,7 +113,7 @@ namespace SistemaDeRecursosHumanos
                                     mostraInfoFuncionario();
 
                                     MessageBox.Show("Adicionado com sucesso!"
-                                        , "Mensssssssssssssssss informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        , "Mensagem informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     clearFields();
                                 }
@@ -123,7 +123,7 @@ namespace SistemaDeRecursosHumanos
                     catch(Exception ex)
                     {
                         MessageBox.Show("Erro: " + ex
-                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
@@ -148,7 +148,7 @@ namespace SistemaDeRecursosHumanos
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Erro: " + ex, "Mensssssssssssssssss de erro"
+                MessageBox.Show("Erro: " + ex, "Mensagem de erro"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -201,12 +201,12 @@ namespace SistemaDeRecursosHumanos
                 || imagemFunc.Image == null)
             {
                 MessageBox.Show("Por favor, preencha todos os campos"
-                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 DialogResult check = MessageBox.Show("Tem certeza que deseja atualizar " +
-                    "o funcionário: " + addFunc_nome.Text.Trim() + "?", "Mensssssssssssssssss de confirmação"
+                    "o funcionário: " + addFunc_nome.Text.Trim() + "?", "Mensagem de confirmação"
                     , MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (check == DialogResult.Yes)
@@ -236,7 +236,7 @@ namespace SistemaDeRecursosHumanos
                             mostraInfoFuncionario();
 
                             MessageBox.Show("Atualização bem sucedida!"
-                                , "Mensssssssssssssssss informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                , "Mensagem informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             
                             clearFields();
                         }
@@ -244,7 +244,7 @@ namespace SistemaDeRecursosHumanos
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro: " + ex
-                        , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
@@ -254,7 +254,7 @@ namespace SistemaDeRecursosHumanos
                 else
                 {
                     MessageBox.Show("Cancelado."
-                        , "Mensssssssssssssssss Informativa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        , "Mensagem Informativa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
@@ -276,12 +276,12 @@ namespace SistemaDeRecursosHumanos
                 || imagemFunc.Image == null)
             {
                 MessageBox.Show("Por favor, preencha os campos em branco"
-                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 DialogResult check = MessageBox.Show("Tem certeza que deseja deletar " +
-                    " o funcionário: " + addFunc_nome.Text.Trim() + "?", "Mensssssssssssssssss de confirmação"
+                    " o funcionário: " + addFunc_nome.Text.Trim() + "?", "Mensagem de confirmação"
                     , MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (check == DialogResult.Yes)
@@ -304,7 +304,7 @@ namespace SistemaDeRecursosHumanos
                             mostraInfoFuncionario();
 
                             MessageBox.Show("Atualizado com sucesso!"
-                                , "Mensssssssssssssssss informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                , "Mensagem informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             clearFields();
                         }
@@ -312,7 +312,7 @@ namespace SistemaDeRecursosHumanos
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro: " + ex
-                        , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
@@ -322,7 +322,7 @@ namespace SistemaDeRecursosHumanos
                 else
                 {
                     MessageBox.Show("Cancelado."
-                        , "Mensssssssssssssssss informativa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        , "Mensagem informativa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }

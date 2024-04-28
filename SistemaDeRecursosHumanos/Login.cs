@@ -45,7 +45,7 @@ namespace SistemaDeRecursosHumanos
         {
             if(labelUsuarioLogin.Text == "" || labelSenhaLogin.Text == ""){
                 MessageBox.Show("Por favor preencha todos os campos"
-                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -70,7 +70,7 @@ namespace SistemaDeRecursosHumanos
                             if(table.Rows.Count >= 1)
                             {
                                 MessageBox.Show("Login bem sucedido!"
-                                    , "Mensssssssssssssssss de sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    , "Mensagem de sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 Menu mForm = new Menu();
                                 mForm.Show();
@@ -79,14 +79,14 @@ namespace SistemaDeRecursosHumanos
                             else
                             {
                                 MessageBox.Show("Usuario/Senha incorreta"
-                                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro: " + ex
-                        , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
