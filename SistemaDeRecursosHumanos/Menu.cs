@@ -18,7 +18,7 @@ namespace SistemaDeRecursosHumanos
         private void logout_btn_Click(object sender, EventArgs e)
         {
             DialogResult check = MessageBox.Show("Tem certeza que deseja deslogar?"
-                , "Mensagem de confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                , "Mensssssssssssssssss de confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if(check == DialogResult.Yes)
             {

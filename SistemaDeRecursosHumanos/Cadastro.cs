@@ -37,7 +37,7 @@ namespace SistemaDeRecursosHumanos
                 || labelSenhaRegistro.Text == "")
             {
                 MessageBox.Show("Por favor, preencha todos os pontos em branco"
-                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -57,7 +57,7 @@ namespace SistemaDeRecursosHumanos
                             if(count >= 1)
                             {
                                 MessageBox.Show(labelUsuarioRegistro.Text.Trim() + " já existe"
-                                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -76,7 +76,7 @@ namespace SistemaDeRecursosHumanos
                                     cmd.ExecuteNonQuery();
 
                                     MessageBox.Show("Registrado com sucesso!"
-                                        , "Mensagem informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        , "Mensssssssssssssssss informativa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     Login loginForm = new Login();
                                     loginForm.Show();
@@ -90,7 +90,7 @@ namespace SistemaDeRecursosHumanos
                     }catch(Exception ex)
                     {
                         MessageBox.Show("Erro: " + ex
-                    , "Mensagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    , "Mensssssssssssssssss de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
