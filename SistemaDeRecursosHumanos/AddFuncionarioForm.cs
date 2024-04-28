@@ -13,11 +13,13 @@ namespace SistemaDeRecursosHumanos
         public static string nomeArquivoBD = "BancoDeDado.mdf";
 
         // Caminho relativo para o arquivo do banco de dados
-        public static string caminhoBD = $"{Environment.CurrentDirectory}\\{nomeArquivoBD}";
+        public static string caminhoBD = $"{Environment.CurrentDirectory}\\BancoDeDado.mdf";
+        public static string caminhoPastaDirectory = $"{Environment.CurrentDirectory}\\Directory";
 
         // String de conexão com AttachDbFilename
         public static string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={caminhoBD};Integrated Security=True";
         SqlConnection connect = new SqlConnection(connectionString);
+
         private Dashboard dashboard;
 
         public AddFuncionarioForm()
@@ -90,7 +92,7 @@ namespace SistemaDeRecursosHumanos
                                     "VALUES(@funcionarioID, @funcNome, @generoFunc, @contatoFunc" +
                                     ", @cargo, @image, @salario, @insereInfo, @status)";
 
-                                string path = Path.Combine(@"C:\Users\danie\OneDrive\Área de Trabalho\SistemaDeRecursosHumanos\SistemaDeRecursosHumanos\Directory\"
+                                string path = Path.Combine(caminhoPastaDirectory
                                     + addFunc_id.Text.Trim() + ".jpg");
 
                                 string diretorioPath = Path.GetDirectoryName(path);
@@ -335,6 +337,16 @@ namespace SistemaDeRecursosHumanos
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

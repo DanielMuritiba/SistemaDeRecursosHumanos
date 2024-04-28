@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EmployeeManagementSystem;
+using SistemaDeRecursosHumanos;
+using System;
 using System.Windows.Forms;
 
 namespace SistemaDeRecursosHumanos
@@ -8,6 +10,7 @@ namespace SistemaDeRecursosHumanos
         public Menu()
         {
             InitializeComponent();
+            pontoForm1.Visible = false;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace SistemaDeRecursosHumanos
             dashboard1.Visible = true;
             addFuncionario.Visible = false;
             salario.Visible = false;
+            pontoForm1.Visible = false;
 
             Dashboard dashForm = dashboard1 as Dashboard;
 
@@ -48,6 +52,7 @@ namespace SistemaDeRecursosHumanos
             dashboard1.Visible = false;
             addFuncionario.Visible = true;
             salario.Visible = false;
+            pontoForm1.Visible = false;
 
             AddFuncionarioForm addEmForm = addFuncionario as AddFuncionarioForm;
 
@@ -63,7 +68,7 @@ namespace SistemaDeRecursosHumanos
             dashboard1.Visible = false;
             addFuncionario.Visible = false;
             salario.Visible = true;
-
+            pontoForm1.Visible = false;
             SalarioForm salaryForm = salario as SalarioForm;
 
             if(salaryForm != null)
@@ -72,5 +77,29 @@ namespace SistemaDeRecursosHumanos
             }
 
         }
+        private void btnFormPonto_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            addFuncionario.Visible = false;
+            salario.Visible = false;
+            pontoForm1.Visible = true;
+            PontoForm salaryForm = pontoForm1 as PontoForm;
+
+            if (salaryForm != null)
+            {
+                salaryForm.RefreshData();
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            addFuncionario.Visible = false;
+            salario.Visible = false;
+        }
+        private void Ponto_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
