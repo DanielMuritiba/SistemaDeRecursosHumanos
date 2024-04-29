@@ -10,7 +10,14 @@ namespace SistemaDeRecursosHumanos
 {
     public partial class Dashboard : UserControl
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\danie\OneDrive\Área de Trabalho\SistemaDeRecursosHumanos\SistemaDeRecursosHumanos\BancoDeDado.mdf"";Integrated Security=True");
+        public static string nomeArquivoBD = "BancoDeDado.mdf";
+
+        // Caminho relativo para o arquivo do banco de dados
+        public static string caminhoBD = $"{Environment.CurrentDirectory}\\{nomeArquivoBD}";
+
+        // String de conexão com AttachDbFilename
+        public static string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={caminhoBD};Integrated Security=True";
+        SqlConnection connect = new SqlConnection(connectionString);
         public Dashboard()
         {
             InitializeComponent();
