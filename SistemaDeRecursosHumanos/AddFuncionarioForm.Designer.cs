@@ -59,6 +59,7 @@ namespace SistemaDeRecursosHumanos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(839, 279);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dataGridView1
             // 
@@ -145,13 +146,14 @@ namespace SistemaDeRecursosHumanos
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(438, 109);
+            this.label7.Location = new System.Drawing.Point(464, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 24);
+            this.label7.Size = new System.Drawing.Size(65, 24);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Atividade:";
+            this.label7.Text = "Status:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // limpaFunc
+            // limpaFuncBtn
             // 
             this.limpaFuncBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
             this.limpaFuncBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -163,7 +165,7 @@ namespace SistemaDeRecursosHumanos
             this.limpaFuncBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.limpaFuncBtn.ForeColor = System.Drawing.Color.White;
             this.limpaFuncBtn.Location = new System.Drawing.Point(602, 163);
-            this.limpaFuncBtn.Name = "addEmployee_clearBtn";
+            this.limpaFuncBtn.Name = "limpaFuncBtn";
             this.limpaFuncBtn.Size = new System.Drawing.Size(113, 37);
             this.limpaFuncBtn.TabIndex = 17;
             this.limpaFuncBtn.Text = "Limpar";
@@ -182,7 +184,7 @@ namespace SistemaDeRecursosHumanos
             this.deletaFuncBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deletaFuncBtn.ForeColor = System.Drawing.Color.White;
             this.deletaFuncBtn.Location = new System.Drawing.Point(442, 163);
-            this.deletaFuncBtn.Name = "addEmployee_deleteBtn";
+            this.deletaFuncBtn.Name = "deletaFuncBtn";
             this.deletaFuncBtn.Size = new System.Drawing.Size(113, 37);
             this.deletaFuncBtn.TabIndex = 16;
             this.deletaFuncBtn.Text = "Deletar";
@@ -201,7 +203,7 @@ namespace SistemaDeRecursosHumanos
             this.atualizaFuncBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atualizaFuncBtn.ForeColor = System.Drawing.Color.White;
             this.atualizaFuncBtn.Location = new System.Drawing.Point(239, 163);
-            this.atualizaFuncBtn.Name = "addEmployee_updateBtn";
+            this.atualizaFuncBtn.Name = "atualizaFuncBtn";
             this.atualizaFuncBtn.Size = new System.Drawing.Size(113, 37);
             this.atualizaFuncBtn.TabIndex = 15;
             this.atualizaFuncBtn.Text = "Atualizar";
@@ -238,7 +240,7 @@ namespace SistemaDeRecursosHumanos
             this.impartaImagemFuncBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.impartaImagemFuncBtn.ForeColor = System.Drawing.Color.White;
             this.impartaImagemFuncBtn.Location = new System.Drawing.Point(737, 126);
-            this.impartaImagemFuncBtn.Name = "addEmployee_importBtn";
+            this.impartaImagemFuncBtn.Name = "impartaImagemFuncBtn";
             this.impartaImagemFuncBtn.Size = new System.Drawing.Size(83, 31);
             this.impartaImagemFuncBtn.TabIndex = 13;
             this.impartaImagemFuncBtn.Text = "Importar";
@@ -250,7 +252,7 @@ namespace SistemaDeRecursosHumanos
             this.imagemFunc.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.imagemFunc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imagemFunc.Location = new System.Drawing.Point(738, 34);
-            this.imagemFunc.Name = "addFunc_imagem";
+            this.imagemFunc.Name = "imagemFunc";
             this.imagemFunc.Size = new System.Drawing.Size(82, 92);
             this.imagemFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagemFunc.TabIndex = 12;
@@ -293,11 +295,11 @@ namespace SistemaDeRecursosHumanos
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(344, 35);
+            this.label5.Location = new System.Drawing.Point(338, 35);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 24);
+            this.label5.Size = new System.Drawing.Size(191, 24);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Número de Telefone";
+            this.label5.Text = "Número de Telefone:";
             // 
             // addFunc_genero
             // 
