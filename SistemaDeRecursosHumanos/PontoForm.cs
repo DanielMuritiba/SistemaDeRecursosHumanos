@@ -34,6 +34,7 @@ namespace EmployeeManagementSystem
             dashboard.ArredondarFunc(panel2, 10);
             dashboard.ArredondarFunc(panel1, 10);
 
+
         }
         public void RefreshData()
         {
