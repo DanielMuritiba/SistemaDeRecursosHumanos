@@ -177,9 +177,15 @@ namespace EmployeeManagementSystem
                 // Caso o texto esteja vazio, limpa o texto das labels
                 btnSaidaHorario.Hide();
                 btnEntradaHorario.Hide();
+                labelHoraEntrada.Text = "";
+                labelHoraSaida.Text = "";
                 codLabel.Text = "";
                 funcLabel.Text = "";
                 cargoLabel.Text = "";
+                btnReajuste.Hide();
+                btnSalvar.Hide();
+                squareEntrada.BackColor = System.Drawing.Color.White;
+                squareSaida.BackColor = System.Drawing.Color.White;
             }
         }
         private void labelCodFunc_TextChanged(object sender, EventArgs e)
@@ -239,9 +245,15 @@ namespace EmployeeManagementSystem
                 // Caso o texto esteja vazio, limpa o texto das labels
                 btnSaidaHorario.Hide();
                 btnEntradaHorario.Hide();
+                btnReajuste.Hide();
+                btnSalvar.Hide();
+                labelHoraEntrada.Text = "";
+                labelHoraSaida.Text = "";
                 codLabel.Text = "";
                 funcLabel.Text = "";
                 cargoLabel.Text = "";
+                squareEntrada.BackColor = System.Drawing.Color.White;
+                squareSaida.BackColor = System.Drawing.Color.White;
             }
 
         }
