@@ -33,32 +33,38 @@ namespace SistemaDeRecursosHumanos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnFormPonto = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.greet_user = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnFechar = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnSalario = new System.Windows.Forms.Button();
             this.btnAddFunc = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.greet_user = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnPonto = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.btnFormEscala = new System.Windows.Forms.Button();
+            this.escalaForm1 = new EmployeeManagementSystem.EscalaForm();
+            this.pontoForm1 = new EmployeeManagementSystem.PontoForm();
             this.dashboard1 = new SistemaDeRecursosHumanos.Dashboard();
             this.addFuncionario = new SistemaDeRecursosHumanos.AddFuncionarioForm();
             this.salario = new SistemaDeRecursosHumanos.SalarioForm();
-            this.pontoForm1 = new EmployeeManagementSystem.PontoForm();
-            this.btnFormPonto = new System.Windows.Forms.Button();
+            this.userControl11 = new EmployeeManagementSystem.EscalaForm();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(60)))));
+            this.panel2.Controls.Add(this.btnFormEscala);
             this.panel2.Controls.Add(this.btnFormPonto);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnLogOut);
@@ -73,6 +79,26 @@ namespace SistemaDeRecursosHumanos
             this.panel2.Size = new System.Drawing.Size(225, 565);
             this.panel2.TabIndex = 1;
             // 
+            // btnFormPonto
+            // 
+            this.btnFormPonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.btnFormPonto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFormPonto.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnFormPonto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnFormPonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnFormPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFormPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFormPonto.ForeColor = System.Drawing.Color.White;
+            this.btnFormPonto.Image = ((System.Drawing.Image)(resources.GetObject("btnFormPonto.Image")));
+            this.btnFormPonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFormPonto.Location = new System.Drawing.Point(14, 377);
+            this.btnFormPonto.Name = "btnFormPonto";
+            this.btnFormPonto.Size = new System.Drawing.Size(200, 40);
+            this.btnFormPonto.TabIndex = 8;
+            this.btnFormPonto.Text = "Ponto";
+            this.btnFormPonto.UseVisualStyleBackColor = false;
+            this.btnFormPonto.Click += new System.EventHandler(this.btnFormPonto_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -83,6 +109,84 @@ namespace SistemaDeRecursosHumanos
             this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Deslogar";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogOut.BackgroundImage")));
+            this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Location = new System.Drawing.Point(11, 517);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(35, 35);
+            this.btnLogOut.TabIndex = 5;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
+            // btnSalario
+            // 
+            this.btnSalario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.btnSalario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalario.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnSalario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnSalario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnSalario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalario.ForeColor = System.Drawing.Color.White;
+            this.btnSalario.Image = ((System.Drawing.Image)(resources.GetObject("btnSalario.Image")));
+            this.btnSalario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalario.Location = new System.Drawing.Point(14, 313);
+            this.btnSalario.Name = "btnSalario";
+            this.btnSalario.Size = new System.Drawing.Size(200, 40);
+            this.btnSalario.TabIndex = 4;
+            this.btnSalario.Text = "Salário";
+            this.btnSalario.UseVisualStyleBackColor = false;
+            this.btnSalario.Click += new System.EventHandler(this.btnSalario_Click);
+            // 
+            // btnAddFunc
+            // 
+            this.btnAddFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.btnAddFunc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddFunc.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnAddFunc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnAddFunc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnAddFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFunc.ForeColor = System.Drawing.Color.White;
+            this.btnAddFunc.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFunc.Image")));
+            this.btnAddFunc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddFunc.Location = new System.Drawing.Point(14, 250);
+            this.btnAddFunc.Name = "btnAddFunc";
+            this.btnAddFunc.Size = new System.Drawing.Size(200, 40);
+            this.btnAddFunc.TabIndex = 3;
+            this.btnAddFunc.Text = "      Adicionar Funcionário";
+            this.btnAddFunc.UseVisualStyleBackColor = false;
+            this.btnAddFunc.Click += new System.EventHandler(this.btnAddFunc_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(14, 190);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(200, 40);
+            this.btnDashboard.TabIndex = 2;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.dashboard_btn_Click);
             // 
             // greet_user
             // 
@@ -95,8 +199,18 @@ namespace SistemaDeRecursosHumanos
             this.greet_user.TabIndex = 1;
             this.greet_user.Text = "Bem-Vindo, idusuário";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(59, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 90);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.escalaForm1);
             this.panel3.Controls.Add(this.pontoForm1);
             this.panel3.Controls.Add(this.dashboard1);
             this.panel3.Controls.Add(this.addFuncionario);
@@ -141,93 +255,7 @@ namespace SistemaDeRecursosHumanos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1100, 35);
             this.panel1.TabIndex = 0;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogOut.BackgroundImage")));
-            this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(11, 517);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(35, 35);
-            this.btnLogOut.TabIndex = 5;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.logout_btn_Click);
-            // 
-            // btnSalario
-            // 
-            this.btnSalario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.btnSalario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalario.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnSalario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnSalario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnSalario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalario.ForeColor = System.Drawing.Color.White;
-            this.btnSalario.Image = ((System.Drawing.Image)(resources.GetObject("btnSalario.Image")));
-            this.btnSalario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalario.Location = new System.Drawing.Point(14, 333);
-            this.btnSalario.Name = "btnSalario";
-            this.btnSalario.Size = new System.Drawing.Size(200, 40);
-            this.btnSalario.TabIndex = 4;
-            this.btnSalario.Text = "Salário";
-            this.btnSalario.UseVisualStyleBackColor = false;
-            this.btnSalario.Click += new System.EventHandler(this.btnSalario_Click);
-            // 
-            // btnAddFunc
-            // 
-            this.btnAddFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.btnAddFunc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddFunc.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnAddFunc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnAddFunc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnAddFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFunc.ForeColor = System.Drawing.Color.White;
-            this.btnAddFunc.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFunc.Image")));
-            this.btnAddFunc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddFunc.Location = new System.Drawing.Point(14, 260);
-            this.btnAddFunc.Name = "btnAddFunc";
-            this.btnAddFunc.Size = new System.Drawing.Size(200, 40);
-            this.btnAddFunc.TabIndex = 3;
-            this.btnAddFunc.Text = "      Adicionar Funcionário";
-            this.btnAddFunc.UseVisualStyleBackColor = false;
-            this.btnAddFunc.Click += new System.EventHandler(this.btnAddFunc_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(14, 190);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(200, 40);
-            this.btnDashboard.TabIndex = 2;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.dashboard_btn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 90);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnPonto
             // 
@@ -248,6 +276,47 @@ namespace SistemaDeRecursosHumanos
             this.btnPonto.Text = "Ponto";
             this.btnPonto.UseVisualStyleBackColor = false;
             this.btnPonto.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // btnFormEscala
+            // 
+            this.btnFormEscala.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            this.btnFormEscala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFormEscala.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnFormEscala.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnFormEscala.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.btnFormEscala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFormEscala.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFormEscala.ForeColor = System.Drawing.Color.White;
+            this.btnFormEscala.Image = ((System.Drawing.Image)(resources.GetObject("btnFormEscala.Image")));
+            this.btnFormEscala.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFormEscala.Location = new System.Drawing.Point(14, 442);
+            this.btnFormEscala.Name = "btnFormEscala";
+            this.btnFormEscala.Size = new System.Drawing.Size(200, 40);
+            this.btnFormEscala.TabIndex = 9;
+            this.btnFormEscala.Text = "Escala";
+            this.btnFormEscala.UseVisualStyleBackColor = false;
+            this.btnFormEscala.Click += new System.EventHandler(this.btnFormEscala_Click_1);
+            // 
+            // escalaForm1
+            // 
+            this.escalaForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(60)))));
+            this.escalaForm1.Location = new System.Drawing.Point(0, 0);
+            this.escalaForm1.Name = "escalaForm1";
+            this.escalaForm1.Size = new System.Drawing.Size(875, 565);
+            this.escalaForm1.TabIndex = 4;
+            // 
+            // pontoForm1
+            // 
+            this.pontoForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(60)))));
+            this.pontoForm1.Location = new System.Drawing.Point(0, 0);
+            this.pontoForm1.Name = "pontoForm1";
+            this.pontoForm1.Size = new System.Drawing.Size(875, 565);
+            this.pontoForm1.TabIndex = 3;
             // 
             // dashboard1
             // 
@@ -273,32 +342,14 @@ namespace SistemaDeRecursosHumanos
             this.salario.Size = new System.Drawing.Size(875, 565);
             this.salario.TabIndex = 0;
             // 
-            // pontoForm1
+            // userControl11
             // 
-            this.pontoForm1.Location = new System.Drawing.Point(0, 0);
-            this.pontoForm1.Name = "pontoForm1";
-            this.pontoForm1.Size = new System.Drawing.Size(875, 565);
-            this.pontoForm1.TabIndex = 3;
-            // 
-            // btnFormPonto
-            // 
-            this.btnFormPonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            this.btnFormPonto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFormPonto.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnFormPonto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnFormPonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.btnFormPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFormPonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFormPonto.ForeColor = System.Drawing.Color.White;
-            this.btnFormPonto.Image = ((System.Drawing.Image)(resources.GetObject("btnFormPonto.Image")));
-            this.btnFormPonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFormPonto.Location = new System.Drawing.Point(14, 403);
-            this.btnFormPonto.Name = "btnFormPonto";
-            this.btnFormPonto.Size = new System.Drawing.Size(200, 40);
-            this.btnFormPonto.TabIndex = 8;
-            this.btnFormPonto.Text = "Ponto";
-            this.btnFormPonto.UseVisualStyleBackColor = false;
-            this.btnFormPonto.Click += new System.EventHandler(this.btnFormPonto_Click);
+            this.userControl11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(60)))));
+            this.userControl11.Location = new System.Drawing.Point(302, 112);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(120, 0);
+            this.userControl11.TabIndex = 0;
+            this.userControl11.Visible = false;
             // 
             // Menu
             // 
@@ -314,10 +365,11 @@ namespace SistemaDeRecursosHumanos
             this.Text = "MainForm";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +393,9 @@ namespace SistemaDeRecursosHumanos
         private System.Windows.Forms.Button btnPonto;
         private EmployeeManagementSystem.PontoForm pontoForm1;
         private System.Windows.Forms.Button btnFormPonto;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private EmployeeManagementSystem.EscalaForm userControl11;
+        private EmployeeManagementSystem.EscalaForm escalaForm1;
+        private System.Windows.Forms.Button btnFormEscala;
     }
 }
